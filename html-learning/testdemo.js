@@ -134,3 +134,28 @@ const outerfunction = function(greeting){
 }
 
 outerfunction('hello')('brother')
+
+const products = [1,2,3,4]
+
+//forEach
+products.forEach((element,index) => {
+    console.log(element,index);
+});
+
+//map applies a function for each element of array
+const x = products.map(item=>{
+    return item += 100;
+})
+console.log(products);
+console.log(x);
+
+const numbers = [4, 9, 16, 25]
+const newnumber = numbers.map(Math.sqrt)
+
+console.log(newnumber);
+
+//filter only returns those items which fulfill a condition
+const y = x.filter(item=>{
+    return item%2 === 0;
+})
+console.log(y)
