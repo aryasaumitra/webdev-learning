@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Learning</title>
+    <script src="./testdemo.js"></script>
 
     <style>
         ol#menu li{
@@ -22,6 +23,46 @@
         a:visited {
             color: teal;
             text-decoration: none;
+        }
+
+        .container1{
+            height: 50vh;
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .container2{
+            height: 50vh;
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-around;
+            align-items:baseline;
+        }
+        .container3{
+            height: 50vh;
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-evenly;
+        }
+        .box{
+            background-color: chocolate;
+            width: 130px;
+            height: 130px;
+            border: 2px solid black;
+            text-align: center;
+        }
+        #box-1{
+            border:2px solid yellow;
+            flex: 1;
+        }
+        #box-2{
+            border:2px solid violet;
+            flex: 2;
+        }
+        #box-3{
+            border:2px solid salmon;
+            flex:1
         }
     </style>
 </head>
@@ -54,6 +95,60 @@
 
 <p>Also note that the default width of text input fields is 20 characters.</p>
 </section>
+
+<div class="container1">
+    <div class="box">
+        <p>Box 1</p>
+    </div>
+    <div class= "box">
+        <p>Box 2</p>
+    </div>
+    <div class="box">
+        <p>Box 3</p>
+    </div>
+    <div class="box">
+        <p>Box 4</p>
+    </div>
+    <div class= "box">
+        <p>Box 5</p>
+    </div>
+    <div class="box">
+        <p>Box 6</p>
+    </div>
+    <div class="box">
+        <p>Box 7</p>
+    </div>
+    <div class= "box">
+        <p>Box 8</p>
+    </div>
+    <div class="box">
+        <p>Box 9</p>
+    </div>
+</div>
+
+<div class="container2">
+    <div class="box" id="box-1">
+        <p>Box 1</p>
+    </div>
+    <div class= "box" id="box-2">
+        <p>Box 2</p>
+    </div>
+    <div class="box" id="box-3">
+        <p>Box 3</p>
+    </div>
+</div>
+
+<div class="container3">
+    <div class="box">
+        <p>Box 1</p>
+    </div>
+    <div class= "box">
+        <p>Box 2</p>
+    </div>
+    <div class="box">
+        <p>Box 3</p>
+    </div>
+</div>
     
 </body>
 </html>
