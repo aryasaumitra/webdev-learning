@@ -1,0 +1,7 @@
+.list-item-css{
+    padding: 10px;
+    color:black;
+    font-size:30px;
+    display: flex;
+    justify-content: space-around;
+}

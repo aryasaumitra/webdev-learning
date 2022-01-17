@@ -159,3 +159,61 @@ const y = x.filter(item=>{
     return item%2 === 0;
 })
 console.log(y)
+
+const transactions = ['+100','-50','-50','+200','-100']
+const initialAmount = 100
+
+const deposits =transactions.filter(transaction => transaction[0] ==='+').map(
+    transaction =>parseInt(transaction.slice(1)) 
+).reduce(
+    (acc,curr)=>{
+        return acc+curr
+    },initialAmount
+)
+console.log(deposits)
+
+const withdrawls =transactions.filter(transaction => transaction[0] ==='-').map(
+    transaction =>parseInt(transaction.slice(1))
+).reduce(
+    (acc,curr)=>{
+        return acc-curr
+    },0
+)
+console.log(withdrawls)
+
+const detailsOfPeople = [{name:'Arya'},{name:'Saumitra'}]
+const pos = detailsOfPeople.findIndex((details)=>{
+    if (details.name === 'Arya') return true
+}
+)
+
+console.log(pos)
+
+console.log(detailsOfPeople.flat())
+
+const arr=new Set([1,2,2,3,3,4,4,4,4,5,6])
+console.log(arr)
+const odd = [1,3,5]
+const combined = [2,4,6, ...odd]
+console.log(combined)
+
+const str1='GeeksforGeeks'
+const str2=str1.slice(2,5)
+console.log(str2)
+
+
+let btn = document.getElementById('btn')
+let output = document.getElementById('output');
+btn.addEventListener('click', () => {
+    let rates = document.getElementsByName('size');
+    rates.forEach((rate) => {
+        if (rate.checked) {
+            output.innerText = `You selected: ${rate.value}`;
+        }
+    });
+
+});
+
+fetch('https://jsonplaceholder.typicode.com/todos')
+  .then(response => response.json())
+  .then(json => console.log(json))
