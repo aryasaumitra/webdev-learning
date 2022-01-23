@@ -1,0 +1,10 @@
+.user-box{
+    border: solid 3px red;
+    display: inline-block;
+    height: 300px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

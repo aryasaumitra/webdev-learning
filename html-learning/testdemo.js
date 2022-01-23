@@ -1,3 +1,7 @@
+(function(){
+    console.log("IIFE"); //IIFE Can only be in the start not intermediate
+})();
+
 const myName = "Arya"
 const myDate = new Date(1997,9,22)
 
@@ -214,6 +218,57 @@ btn.addEventListener('click', () => {
 
 });
 
-fetch('https://jsonplaceholder.typicode.com/todos')
-  .then(response => response.json())
-  .then(json => console.log(json))
+const individualOne = {
+    name:'Arya Saumitra',
+    rollNo:"1234567",
+    birthYear:1997,
+    calcAge(){
+        console.log(`${this.name} is the age of ${2021 - this.birthYear}`)
+    }
+}
+
+individualOne.calcAge(); // calcAge is bind to individual One
+
+const calcAgeModified = individualOne.calcAge; // we are defining a new function 
+
+const individualTwo = {
+    name:'Ayush',
+    rollNo:"1234567",
+    birthYear:1998,
+    // calcAge(){
+    //     console.log(`${this.name} is the age of ${2021 - this.birthYear}`)
+    // }
+}
+
+calcAgeModified.call(individualTwo) //calling the object on calcAgemOdified
+
+// fetch('https://jsonplaceholder.typicode.com/todos')
+//   .then(response => response.json())
+//   .then(json => console.log(json))
+
+const personOne = {
+    nameOfIndividual: 'Arya Saumitra',
+    birthYear:1997,
+    rollNo:"123456",
+    calcAge(){
+        console.log(`${this.nameOfIndividual} is the age of ${2021 - this.birthYear}`)
+    }
+};
+
+const personTwo = {
+    nameOfIndividual: 'Ayush',
+    birthYear:1998,
+    rollNo:"123456",
+}
+
+const newCalcAge = personOne.calcAge.bind(personTwo); //returns a new function
+
+newCalcAge() //this function can access the details of personTwo
+
+//IIFE (Immediately Invoked Function)
+
+const description=function(){
+    console.log("Hello IIFe");
+}
+
+//Optional Chaining is interesting to test methods or object properties if they are appropriate.

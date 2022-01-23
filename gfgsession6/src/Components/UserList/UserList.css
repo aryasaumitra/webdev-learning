@@ -1,0 +1,10 @@
+.user-list{
+    border: 3px solid teal;
+}
+
+.alluserbox{
+    border: 3px solid firebrick;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}

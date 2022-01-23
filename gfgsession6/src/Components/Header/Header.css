@@ -1,0 +1,21 @@
+.header{
+    color: wheat;
+    background-color: black;
+    height: 100px;
+    display:  flex;
+    justify-content: space-around;
+    flex:1;
+    align-items: center;
+    
+}
+.h1{
+    width: 200px;
+    padding: 100px;
+}
+.header .link-box{
+    width: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1;
+}
